@@ -15,7 +15,7 @@
 
 from game_data import data
 from art import logo, vs
-from replit import clear
+import os
 import random
 
 winning_steak = 0
@@ -39,7 +39,7 @@ def compare_names(name1, name2):
     
 
 while game_over:
-  # print(logo)
+  print(logo)
   
   name1 = random.choice(data)
   name2 = random.choice(data)
@@ -66,7 +66,7 @@ while game_over:
   
   if guess == winner:
     winning_steak += 1
-    clear()
+    os.system('clear')
     print(f"You're right! Current score: {winning_steak}")
   else:
     print(f"Sorry, that's wrong. Final score: {winning_steak}")
